@@ -1,7 +1,17 @@
-output "key_name"{
-    value = "${aws_key_pair.terraform_april.key_name}"
+output "key_name" {
+  value = "${aws_key_pair.terraform_april.key_name}"
 }
 
 output "bucketname" {
-    value = "${aws_s3_bucket.b.bucket}"
+  value = "${aws_s3_bucket.b.bucket}"
+}
+output "ID" {
+  value = "${aws_instance.web.id}"
+}
+
+output "username" {
+   value = "ec2-user"
+}
+output "public_ip" {
+   value = "${aws_instance.web.public_ip}"
 }
