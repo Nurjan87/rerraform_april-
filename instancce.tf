@@ -6,7 +6,7 @@ resource "aws_instance" "web" {
     user_data = "${file("userdata.sh")}"
 
     tags = {
-        Name = "Dev"
+        Name = "${var.Env}"
         Dept = "IT"
         Group = "April"
         Created_by = "Nurjan"
