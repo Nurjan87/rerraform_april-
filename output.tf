@@ -1,3 +1,7 @@
 output "key_name"{
-    value = "${aws_key_pair.terraform_april.aws_key_pair}"
+    value = "${aws_key_pair.terraform_april.key_name}"
+}
+
+ortput "bucketname" {
+    value = "${aws_s3_bucket.b.bucket}"
 }
